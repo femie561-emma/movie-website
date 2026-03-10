@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineSearh</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <nav id="mainNav">
+<!-- <li><a href="">Home</a></li>
+<li><a href="">Servies</a></li>
+<li><a href="">Series</a></li> -->
+
+    
+  </nav>
+  <div id="container">
+
+   <!-- <button id="unlock-btn" class="Click" >Click <br>  to <br>unlock Movies Website.
+    <h3> SERCH YOUR FAVOURITE MOVIES</h3>
+
+          <h3>Welcome to Emmanuel Search Movie Website</h3>
+   
+   
+   </button>
+  
+  
+   <div id="quiz-content" style="display: none;" > -->
+<button id="modeToggle">🌙 Dark Mode</button>
+     <h3>Emmanuel <span id="movie">Movie</span> <span id="web">Website</span> </h3>
+<div class="movies">
+<header>
+ 
+  <h1>CineSearh 🎬</h1>
+  
+  <div class="search-bar">
+  <input type="text" id="searchInput" placeholder="Search for movies...">
+  <button id="searchBtn">Search</button>
+  </div>
+
+  <!-- <p id="emmanuel" style="display: none; text-align: center; margin: 20px;">Emmanuel.🎬</p> -->
+
+
+<div id="loading" style="display: none; text-align: center; margin: 20px;">
+
+  <p>Loading movies...</p>
+  
+</div>
+</header>
+     
+  
+<main>
+  <div id="movies" class="movie-grid"></div>
+
+
+</main>
+
+
+
+<!-- <button  id="next-btn"  onclick="nextQuestion()" > </button> -->
+   
+
+<!-- 
+    </div> 
+    
+  </div> -->
+
+<div id="movieModal" class="modal">
+
+  <div class="modal-content">
+  <span id="closeModal" class="close">&times;</span>
+
+<video id="modalVideo" width="100%" controls><source src="" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+
+  <img id="modalPoster" src="" alt="Movie poster">
+ <h2 id="modalTitle"></h2>
+<p><strong>Year:</strong><span id="modalYear"></span></p>
+<p><strong>Genre:</strong><span id="modalGenre"></span></p>
+<p><strong>Director:</strong><span id="modalDirector"></span></p>
+<p><strong>Actors:</strong><span id="modalActors"></span></p>
+<p><strong>Plot:</strong><span id="modalPlot"></span></p>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+<audio id="clickSound" src="mp3.wav"></audio>
+</div>
+<div id="second-con">
+  
+</div>
+
+  
+   <script src="js/script.js"></script>
+</body>
+</html>
