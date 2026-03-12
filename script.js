@@ -6,7 +6,7 @@
 
 const apiKey = "63d298e3";
 
-
+const body = document.body;
 
 const modal =        document.getElementById("movieModal");
 const closeModal =  document.getElementById("closeModal");
@@ -98,7 +98,7 @@ searchBtn.addEventListener("click", () => {
   
   const query = document.getElementById("searchInput").value.trim();
   
-  if(query === " ") {
+  if(query === "") {
     document.getElementById("movies").innerHTML =
   `<p style="text-align: center;">Please enter a movie Name</p>`;
 
@@ -186,7 +186,7 @@ function displayMovies(movies) {
 
 }
 
-const reels = ["clip1.mp4", "clip2.mp4", "clip3.mp4"];
+const reels = ["assets/clip1.mp4", "assets/clip2.mp4", "assets/clip3.mp4"];
 
 function showModal(imdbID) {
   fetch(`https://www.omdbapi.com/?i=${imdbID}&apiKey=${apiKey}`)
@@ -205,7 +205,7 @@ function showModal(imdbID) {
 
 
     //  Movie details
-   modalPoster.src = movie.Poster != "N/A" ? movie.Poster : "https://via.placholder.com/200x300?text=No+Image";
+   modalPoster.src = movie.Poster != "N/A" ? movie.Poster : "https://via.placeholder.com/200x300?text=No+Image";
    modalTitle.textContent = movie.Title;
    modalYear.textContent = movie.Year;
    modalGenre.textContent = movie.Genre;
@@ -227,11 +227,11 @@ function showModal(imdbID) {
  });
   
 window.addEventListener("click", e => {
-  if (e.target === modal) 
+  if (e.target === modal) {
     modal.style.display = "none";
    modalVideo.pause();
    modalVideo.currentTime = 0;
-
+  }
 });
 
 document.getElementById("testSoundBtn").addEventListener("click", () =>{
@@ -264,5 +264,6 @@ document.getElementById("testSoundBtn").addEventListener("click", () =>{
 
 
 // })
+
 
 
